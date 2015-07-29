@@ -1,0 +1,16 @@
+import java.util.*;
+import java.io.*;
+class Properties_{
+	public static void main(String args[])throws IOException{
+		Properties p=new Properties();
+		FileInputStream fis=new FileInputStream("abc.properties");
+		p.load(fis);
+		System.out.println(p);
+		String s=p.getProperty("venki");
+		System.out.println(s);
+		p.setProperty("nag","bad villian");
+		FileOutputStream fout=new FileOutputStream("abc.properties");
+		p.store(fout,"kiya re update");
+		
+	}
+}    
